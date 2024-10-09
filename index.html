@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://kit.fontawesome.com/57dd97a901.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+
+<body>
+    <div id="logo">
+        <div id="logo-principal">
+            <img src="imagens/logo.webp" alt="logo" width="100px">
+            <!--nome da pizzaria vai ser ligeirinho-->
+        </div>
+        <span id="icon-menu"><i class="fa-solid fa-bars" onclick="changeIcon(this)"></i></span>
+        <div id="menu" class="menu hide">
+            <ul type="none" id="listas">
+                <li><a href="#">Home</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Minha sacola</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="conteudo">
+        <div id="descricao">
+            <h1> The trastiest & <br> Best Pizzas in the <br> word</h1>
+        </div>
+        <div id="texto">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci nam saepe iusto,ipsam harum sunt
+                fugit consequatur repellendus quos reprehenderit aperiam vitae nobis quasi quaerat dolor. Maxime a quia
+                expedita?</p>
+
+            <h1 id="texto2">Faça seu pedido!</h1>
+
+        </div>
+    </div>
+    <div id="logo-secundario">
+        <img src="imagens/piazzaiolo.png" alt="pizza" id="cozinheiro">
+        <h2 id="texto-logo">MAMAMIA!!</h2>
+    </div>
+    <main id="cardapio">
+        <div id="section-titulo">
+            <h1>Cardápio</h1>
+        </div>
+        <div id="section-cardapio">
+            <div id="produto-1">
+                <img src="imagens/pizza muzzarela.jpeg" alt="" width="200px">
+                <h2 class="botao">Muzzarela</h2>
+                <button>R$****</button>
+            </div>
+            <div id="produto-2">
+                <img src="imagens/pizza portuguesa.jpeg" alt="" width="200px">
+                <h2 class="botao">Portuguesa</h2>
+                <button>R$****</button>
+            </div>
+            <div id="produto-3">
+                <img src="imagens/Seara-Pizza-Calabresa.png" alt="" width="200px">
+                <h2 class="botao">Calabresa</h2>
+                <button>R$****</button>
+            </div>
+            <div id="produto-4">
+                <img src="imagens/pizza_frango.png" alt="" width="200px">
+                <h2 class="botao">Frango</h2>
+                <button>R$****</button>
+            </div>
+    </main>
+    <div id="section-final">
+        <a href="#logo"><span id="return">Voltar ao topo <i class="fa-solid fa-chevron-up"></i></span></a>
+        <div id="mapa">
+            <h3 style="color: red;">INFORMAÇÕES</h3>
+            <ul type="none">
+                <li><a href="">Quem somos</a></li>
+                <li><a href="">Fale conosco</a></li>
+            </ul>
+        </div>
+        <div id="contato">
+            <h3 style="color: red;">SIGA-NOS</h3>
+            <a href="http://www.facebook.com"><i class="fab fa-facebook-f" style="color: rgb(53, 53, 238);"></i></i></a>
+            <a href="http://instagram.com/_u/luis_xzc/"><i class="fa-brands fa-instagram"
+                    style="color: blueviolet;"></i></a>
+        </div>
+        <div id="privacidade">
+            <h3><a href="termos.html">TERMOS & CONDIÇÕES</a></h3>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    var iconmenu = document.querySelectorAll('#icon-menu');
+
+    iconmenu[0].addEventListener('click', () => {
+        let menu = document.getElementById('menu');
+        if (menu.classList.contains('hide')) {
+            menu.classList.add('show');
+            menu.classList.remove('hide');
+        } else {
+            menu.classList.add('hide');
+            menu.classList.remove('show');
+        }
+    })
+    /*let changeIcon = function(icon){
+        icon.classList.toggle('fa-times');
+    }*/
+    changeIcon = (icon) => icon.classList.toggle('fa-times')
+</script>
+
+</html>
