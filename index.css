@@ -310,20 +310,23 @@ span {
     color: black;
     font-weight: bold;
 }
-
+#mapa{
+    display: flex;
+    flex-direction: column;
+}
 #mapa a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 20px;
     font-size: 1.1em;
+    text-align: center;
 }
 #contato{
     display: block;
     text-align: center;
 }
-#mapa li:hover {
-    color: #FFC107;
+#mapa a:hover {
+    color: blue;
 }
 #privacidade a {
     color: white;
@@ -345,4 +348,7 @@ button:hover{
 }
 #return:hover{
     background-color: #aaa7a7;
+}
+#inf1{
+    color: black;
 }
